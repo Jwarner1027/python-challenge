@@ -62,6 +62,14 @@ with open(budget_csv, "r") as csvfile:
     increase_date =  month_list[increase_index]
     decrease_date = month_list[decrease_index]
 
+print("Financial Analysis\n")
+print("-----------------------------\n")
+print("Total Months: %d\n" % month_total)
+print("Total $ %d\n" % net_total)
+print("Average Change: $%d\n" % round(average_change, 2))
+print("Greatest Increase in Profits: %s ($%s)\n" % (increase_date, greatest_inc))
+print("Greatest Decrease in Profits: %s ($%s)" % (decrease_date, greatest_dec))
+
 #Print in text file
 analysis = open("analysis.txt", 'w')
 analysis.write("Financial Analysis\n")
